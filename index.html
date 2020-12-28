@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE HYUN</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cf.channel.io/avatar/text/L.004abf.png" rel="shortcut icon" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<style>
+    body{height: 100%;}
+    html{scroll-behavior: smooth;height:100%;}
+    header{
+        position: fixed;width:100%;z-index: 1;
+        background:rgba(0, 0, 0, 0.1);font-weight: 500;
+        transition-duration: 0.3s;
+        display:flex;justify-content: space-around;
+    }
+    .header-ul{display:flex; list-style-type: none;}
+    .header-li{}
+    .pad{padding: 1rem 0rem 1rem;}
+    .sectionPadding{padding: 0rem 9rem 0rem;}
+    .li-a{text-decoration: none; padding: 0rem 1rem 0rem; transition-duration: 0.2s; font-weight: 700;}
+    .first-img{
+        background-image:url('../portfolio/img/키보드화면.jpg');height: 100vh;opacity: 0.85; background-repeat: round;
+        background-attachment: fixed;display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: black;
+        }
+    #first-section{}
+    .name{font-size: 20px;}
+    *{margin: 0; padding: 0;font-family:'Open Sans', sans-serif;}
+    .img-text{font-size: 30px;text-align: center;}
+    .font-color-white{color:white;}
+    #codeicon{
+        position: absolute;
+        left: 58%;
+        top: 49%;
+        animation-name:downmotion;
+		animation-duration:1s;
+	    animation-duration: leaner;
+	    animation-iteration-count:infinite;
+	    animation-direction:alternate;
+	    animation-fill-mode: forwards;
+    }
+    .headerRgb{background:rgba(0,0,0,1);}
+
+    @-webkit-keyframes downmotion{
+  0% {
+    top:50%
+  }
+  50%{
+    top:48%
+  }
+  100% {
+    top:50%
+  }
+}
+#me{
+    width: 150px;
+    border-radius: 100%;
+    height: 150px;
+    border: 2px solid deepskyblue;
+    }
+    .margin-bottom{margin-bottom:3rem;}
+    #arrow:hover{
+        color:gray;
+    }
+    .nav-up { top: -40px;}
+    #arrow{transition-duration: 0.3s;}
+    .li-a:hover{border-bottom: 2px solid;
+    padding-bottom: 0.2rem;color:lightskyblue;}
+    .liBlue{border-bottom: 2px solid;
+    padding-bottom: 0.2rem;color:lightskyblue;}
+    .homeArrow{
+    position: fixed;
+    left: 93%;
+    top: 102%;
+    transition-duration: 0.3s;
+    color:black;
+    }
+    .d-flex{display:flex;justify-content: center;}
+    .img-flex{display:flex;justify-content: center;}
+    .wid-100{width: 100%;}
+    .i-text{border-bottom: 5px solid aquamarine;padding-bottom: 0.2rem;font-size: 27px;}
+    .d-height{height:30%;}
+    .down-padding{padding: 8rem 0rem 0rem;}
+    .dis-no{display:none;}
+    .dis-block{display: block;}
+    #ham{cursor: pointer;display: none;}
+    #footerDiv{height:950px;position: relative;}
+    @media screen and (max-width: 730px){
+        #ham{display:flex;justify-content: space-around;}
+        #h-ul{display:none;}
+    }
+    @media screen and (max-width: 1200px){
+        .sectionPadding{padding: 0rem 2rem 0rem;}
+        .wid-30{width:20%;}
+    }
+    @media screen and (max-width:900px){
+        #footerDiv{margin-top: 250px !important;}
+        .d-flex{display:inline-block;}
+        .d-section{width:100%;}
+        #divP{width:100%;}
+        .wid-30{width:100% !important;text-align: center;}
+        #d1{height:100px;}
+        .d-height{height:auto};
+    }
+    @media screen and (min-width: 730px){
+        #h-ul{display:flex !important;}
+    }
+    @media screen and (max-height: 700px){
+        #p-section{margin-top: 150px;}
+    }
+    #skills{height:48%;}
+    .img-wid{width:160px;}
+    .flex-center{display: flex;
+    justify-content: center;
+    flex-direction: column;}
+    .margin-r{margin-right: 5rem;}
+    .radius{border-radius: 100%;}
+    .skills-text{text-align: center;}
+    .s-text{margin-top: 2.3rem; font-family: sans-serif;}
+    #h-ul li{margin-bottom: 0.2rem; text-align: center;}
+    .c-font{font-family: 'Spoqa Han Sans', sans-serif;font-weight: 200;}
+    .font-w{font-weight: 600;}
+    p{margin-bottom:2rem;}
+    .space{height:15%;}
+    .h-section{height: 100vh;}
+    .wid-30{width:25%;}
+    #s-img{justify-content: center;}
+    .r-div{margin-top:2rem; position: relative;}
+    .p-img{width:350px;height:240px;margin-right: 2rem; border-radius: 20px; border: 2px solid black;background-repeat: round;margin-bottom: 2rem;}
+    #p-img1{background-image: url("../portfolio/img/메인.png");}
+    #p-img2{background-image: url("../portfolio/img/앤샐러드.png");}
+    .p-div{position: relative;}
+    .tag{color: #333135;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    width:36px;}
+    .img-icon{position: absolute;top: 30%;left: 18%; transition: all 0.2s; background-color: rgba(0, 0, 0, 0) !important;}
+    .img-opacity-none{opacity: 0 !important;}
+    .img-opacity{opacity: 1 !important;}
+    /* .p-div:hover{opacity: 0.5;} */
+    .b-white{background: white !important;}
+    .img-icon a i:hover{background:aquamarine;}
+    .contact-a:hover{background: aquamarine;}
+    .p-title{font-size: 36px;}
+    #contact{width: 100%;text-align: center;font-size: 36px;height:55%;}
+      .contact-a{border-radius: 100%;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    color:black;
+    text-decoration: none;
+    }
+    #f-text{color:white;font-size:16px;font-weight: 700;padding: 2rem 0rem 0rem;}
+</style>
+<body>
+    <header id="head">
+        <div class="name pad font-color-white">SE HYUN <b>LEE</b></div>        
+        <div>
+        <i id="ham" class="fas fa-bars fa-2x pad font-color-white"></i>
+        <ul id="h-ul" class="header-ul pad font-color-white">
+            <li><a class="li-a font-color-white" href="#first-section" onclick="toggle();">HOME</a></li>
+            <li><a class="li-a font-color-white" href="#s2" onclick="toggle();">ABOUT</a></li>
+            <li><a class="li-a font-color-white" href="#s2" onclick="toggle();">SKILLS</a></li>
+            <li><a class="li-a font-color-white" href="#p-section" onclick="toggle();">PROJECT</a></li>
+            <li><a class="li-a font-color-white" href="#footerDiv" onclick="toggle();">CONTACT</a></li>
+        </ul>
+    </div>
+    </header>
+
+    <section id="first-section">
+        <div class="first-img">
+        <div class="img-text font-color-white"><img src="../portfolio/img/170425 이세현 웹.jpg" alt="" id="me" class=" margin-bottom">
+            <p class="margin-bottom">이세현</p>
+            <p class="margin-bottom">Back-End Developer</p>
+            <a href="#s2"><i class="fas fa-arrow-alt-circle-down fa-2x font-color-white" id="arrow"></i></a>
+        </div>
+        </div>
+    </section>
+
+    <section  id="s2" class="sectionPadding h-section">
+        <div class="space"></div>
+        <div class="d-flex wid-100">
+        <div id="d1" class="wid-30 d-height"><span class="i-text">ABOUT</span></div>
+        <div class="wid-100 d-height r-div">
+            <p class="font-w skills-text">"28살 늦깎이 개발자 이세현입니다."</p>
+            <p class="c-font skills-text">스마트 콘텐츠 융합 응용SW 엔지니어 양성과정 수료를 통해 Java를 이용한 웹 개발을 배웠습니다. <br>
+                내가 생각한 모습을 고민하여 구현한다는 것에 큰 매력을 느꼈습니다.<br>
+                남들보다 느리고 작은 발을 가지고 시작하는 만큼 더 노력하는 개발자가 되겠습니다.
+            </p>
+        </div>
+        </div>
+        <div id="skills" class="d-flex wid-100">
+            <div class="wid-30"><span class="i-text">SKILLS</span></div>
+            <div class="wid-100 skills-text r-div">
+                <p class="font-w">프로젝트를 제작하면서 사용한 기술입니다.</p>
+                <div id="s-img" class="img-flex">
+                    <div class="margin-r">
+                        <img class="img-wid radius" src="../portfolio/img/front.png" alt="">
+                        <p class="s-text">JavaScript·HTML<br>CSS·JQuery</p>
+                    </div>
+                    <div class="margin-r">
+                        <img class="img-wid radius" src="../portfolio/img/back.png" alt="">
+                        <p class="s-text">
+                            Java · Spring ·<br>
+                            OracleDB
+                        </p>
+                        </div>
+                    <div class="flex-center">
+                        <img class="img-wid" src="../portfolio/img/DevOps-Gear.png" alt="" style="margin-bottom: 2.5rem;margin-top: 2.5rem;">
+                        <p class="s-text">git · AWS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="p-section" class="sectionPadding h-section">
+        <div class="space"></div>
+        <div class="d-flex" id="divP">
+            <div id="project" class="wid-30"><span class="i-text wid-30">PROJECT</span></div>
+            <div class="r-div wid-100 skills-text">
+                <h2 class="margin-bottom">팀프로젝트</h2>
+                <div class="d-flex">
+                    <div>
+                    <div class="p-div p-img" id="p-img1">
+                        <div class="img-icon img-opacity-none">
+                            <p class="p-title">ORKENY</p>
+                            <a href="#" target="open"><i class="fas fa-home fa-2x tag"></i></a>
+                            <a href="https://github.com/ui0426/Orkney" target="open"><i class="fab fa-github fa-2x tag"></i></a>
+                            <a href="../portfolio/pdf/orkneyPPT1.pdf" target="open"><i class="fas fa-file-pdf fa-2x tag"></i></a>
+                        </div>
+                    </div>
+                    <p style="margin-right:2rem;">
+                        <b>가구 판매 웹사이트 구현</b><br>
+                        사이트의 실시간 채팅 · 로그인/회원가입 <br>· 문의 관리 등을
+                        담당하였습니다.
+                    </p>
+                </div>       
+                    <div>
+                    <div class="p-div p-img" id="p-img2">
+                        <div class="img-icon img-opacity-none">
+                            <p class="p-title">ENSALAD</p>
+                            <a href="https://github.com/ui0426/EnsaladTeam" target="open"><i class="fab fa-github fa-2x tag"></i></a>
+                            <a href="../portfolio/pdf/ensalad.pdf" target="open"><i class="fas fa-file-pdf fa-2x tag"></i></a>
+                            <a href="#" target="open" style="visibility: hidden;"><i class="fas fa-home fa-2x tag"></i></a>
+                        </div>
+                    </div>
+                    <p style="margin-right:2rem;">
+                        <b>커스텀 샐러드 웹사이트 구현</b><br>
+                        커스텀 주문 페이지 · 커뮤니티<br>· 
+                        게시글 작성 등을 담당하였습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footerDiv">
+        <div class="space"></div>
+            <div id="contact">
+                <span class="i-text" style="font-size:36px;">CONTACT</span>
+                <br><br><br>
+                <p>EMAIL : sehyun0168@gmail.com</p>
+                <br>
+                <div>
+                    <a class="contact-a" href="mailTO:sehyun0168@gmail.com"><i class="fa-2x fas fa-envelope"></i></a>
+                    <a class="contact-a" href="https://github.com/ui0426" target="open"><i class="fa-2x fab fa-github"></i></a>
+                </div>
+            </div>
+        <div style="background-color: rgba(0,0,0,0.8);height:30%;text-align: center;">
+            <p id="f-text">감사합니다.</p>
+        </div>
+    </footer>
+    <a href="#first-section"><i class="fas fa-arrow-alt-circle-up fa-3x homeArrow"></i></a>
+</body>
+<script>
+  console.log(document.querySelector('#s2').scrollHeight);
+   
+
+    var didScroll;
+//스크롤 이벤트 
+window.onscroll = function(e) {
+    didScroll = true;
+   
+};
+
+//0.25초마다 스크롤 여부 체크하여 스크롤 중이면 hasScrolled() 호출
+setInterval(function(){
+    if(didScroll){
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled(){
+    var nowScrollTop = window.scrollY;
+    var sectionScroll=parseInt($(".first-img").css("height"));
+    if(nowScrollTop>=sectionScroll) {
+        $("#head").addClass("headerRgb");
+        $(".homeArrow").css("top","87%");
+    }else {
+        $("#head").removeClass("headerRgb");
+        $(".homeArrow").css("top","102%");
+    }
+}
+$("#ham").click(e=>{
+  toggle();
+})
+
+function toggle(){
+    $("#h-ul").slideToggle(500);
+}
+$(".p-div").hover(e=>{
+   $(e.target).addClass("b-white");
+   let icon=$(e.target).find(".img-icon");
+   $(icon).removeClass("img-opacity-none");
+   $(icon).removeClass("b-white");
+   $(icon).addClass("img-opacity"); 
+},e=>{
+    $(e.target).removeClass("b-white");
+    let icon=$(e.target).find(".img-icon");
+   $(icon).removeClass("img-opacity");
+   $(icon).removeClass("b-white");
+   $(icon).addClass("img-opacity-none");
+});
+
+
+</script>
+</html>
