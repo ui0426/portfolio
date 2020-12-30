@@ -81,17 +81,6 @@ color:black;
 .dis-block{display: block;}
 #ham{cursor: pointer;display: none;}
 #footerDiv{height:950px;position: relative;}
-@media screen and (max-width: 730px){
-    #ham{display:flex;justify-content: space-around;}
-    #h-ul{display:none;}
-    .img-wid{width:120px !important;}
-    .margin-r{margin-right:2rem !important;}
-    .homeArrow{left:81%;}
-}
-@media screen and(max-width: 500px){
-    .img-wid{width:85px !important;}
-    #mymail{font-size: 25px;}
-}
 @media screen and (max-width: 1200px){
     .sectionPadding{padding: 0rem 2rem 0rem;}
     .wid-30{width:20%;}
@@ -105,6 +94,14 @@ color:black;
     #d1{height:100px;}
     .d-height{height:auto};
 }
+@media screen and (max-width: 730px){
+    #ham{display:flex;justify-content: space-around;}
+    #h-ul{display:none;}
+    .img-wid{width:110px !important;}
+    .margin-r{margin-right:2rem !important;}
+    .homeArrow{left:81%;}
+}
+
 @media screen and (min-width: 730px){
     #h-ul{display:flex !important;}
 }
