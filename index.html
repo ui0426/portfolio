@@ -134,7 +134,7 @@
     .wid-30{width:25%;}
     #s-img{justify-content: center;}
     .r-div{margin-top:2rem; position: relative;}
-    .p-img{width:350px;height:240px;margin-right: 2rem; border-radius: 20px; border: 2px solid black;background-repeat: round;margin-bottom: 2rem;}
+    .p-img{width:350px;height:240px;margin-right: 2rem; border-radius: 20px; border: 2px solid black;background-repeat: round;margin-bottom: 1rem;}
     #p-img1{background-image: url("img/메인.png");}
     #p-img2{background-image: url("img/앤샐러드.png");}
     .p-div{position: relative;}
@@ -146,7 +146,7 @@
     cursor: pointer;
     transition: all 0.2s;
     width:36px;}
-    .img-icon{position: absolute;top: 30%;left: 18%; transition: all 0.2s; background-color: rgba(0, 0, 0, 0) !important;}
+    .img-icon{transition: all 0.2s; background-color: rgba(0, 0, 0, 0) !important;margin-right: 1rem;}
     .img-opacity-none{opacity: 0 !important;}
     .img-opacity{opacity: 1 !important;}
     /* .p-div:hover{opacity: 0.5;} */
@@ -185,7 +185,7 @@
 
     <section id="first-section">
         <div class="first-img">
-        <div class="img-text font-color-white"><img src="img/170425 이세현 웹.jpg" alt="" id="me" class=" margin-bottom">
+        <div class="img-text font-color-white"><img src="img/사진1.jpg" alt="" id="me" class=" margin-bottom">
             <p class="margin-bottom">이세현</p>
             <p class="margin-bottom">Back-End Developer</p>
             <a href="#s2"><i class="fas fa-arrow-alt-circle-down fa-2x font-color-white" id="arrow"></i></a>
@@ -212,7 +212,7 @@
                 <div id="s-img" class="img-flex">
                     <div class="margin-r">
                         <img class="img-wid radius" src="img/front.png" alt="">
-                        <p class="s-text">JavaScript·HTML<br>CSS·JQuery</p>
+                        <p class="s-text">JavaScript · HTML<br>CSS · JQuery</p>
                     </div>
                     <div class="margin-r">
                         <img class="img-wid radius" src="img/back.png" alt="">
@@ -238,33 +238,31 @@
                 <div class="d-flex">
                     <div>
                     <div class="p-div p-img" id="p-img1">
-                        <div class="img-icon img-opacity-none">
-                            <p class="p-title">ORKENY</p>
-                            <a href="#" target="open"><i class="fas fa-home fa-2x tag"></i></a>
-                            <a href="https://github.com/ui0426/Orkney" target="open"><i class="fab fa-github fa-2x tag"></i></a>
-                            <a href="pdf/orkneyPPT1.pdf" target="open"><i class="fas fa-file-pdf fa-2x tag"></i></a>
-                        </div>
                     </div>
-                    <p style="margin-right:2rem;">
-                        <b>가구 판매 웹사이트 구현</b><br>
-                        사이트의 실시간 채팅 · 로그인/회원가입 <br>· 문의 관리 등을
-                        담당하였습니다.
-                    </p>
+                    <div class="img-opacity img-icon">
+                        <a href="#" target="open"><i class="fas fa-home fa-2x tag"></i></a>
+                        <a href="https://github.com/ui0426/Orkney" target="open"><i class="fab fa-github fa-2x tag"></i></a>
+                        <a href="pdf/orkneyPPT1.pdf" target="open"><i class="fas fa-file-pdf fa-2x tag"></i></a>
+                        <p style="margin-right:2rem;margin-top: 1rem;">
+                            <b>가구 판매 웹사이트 구현</b><br>
+                            사이트의 실시간 채팅 · 로그인/회원가입 <br>· 문의 관리 등을
+                            담당하였습니다.
+                        </p>
+                    </div>
                 </div>       
                     <div>
                     <div class="p-div p-img" id="p-img2">
-                        <div class="img-icon img-opacity-none">
-                            <p class="p-title">ENSALAD</p>
-                            <a href="https://github.com/ui0426/EnsaladTeam" target="open"><i class="fab fa-github fa-2x tag"></i></a>
-                            <a href="pdf/ensalad.pdf" target="open"><i class="fas fa-file-pdf fa-2x tag"></i></a>
-                            <a href="#" target="open" style="visibility: hidden;"><i class="fas fa-home fa-2x tag"></i></a>
-                        </div>
                     </div>
-                    <p style="margin-right:2rem;">
-                        <b>커스텀 샐러드 웹사이트 구현</b><br>
-                        커스텀 주문 페이지 · 커뮤니티<br>· 
-                        게시글 작성 등을 담당하였습니다.
-                    </p>
+                    <div class="img-icon">
+                        <a href="https://github.com/ui0426/EnsaladTeam" target="open"><i class="fab fa-github fa-2x tag"></i></a>
+                        <a href="pdf/ensalad.pdf" target="open"><i class="fas fa-file-pdf fa-2x tag"></i></a>
+                        <a href="#" target="open" style="visibility: hidden;"><i class="fas fa-home fa-2x tag"></i></a>
+                        <p style="margin-right:2rem;;margin-top: 1rem;">
+                            <b>커스텀 샐러드 웹사이트 구현</b><br>
+                            커스텀 주문 페이지 · 커뮤니티<br>· 
+                            게시글 작성 등을 담당하였습니다.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -325,19 +323,7 @@ $("#ham").click(e=>{
 function toggle(){
     $("#h-ul").slideToggle(500);
 }
-$(".p-div").hover(e=>{
-   $(e.target).addClass("b-white");
-   let icon=$(e.target).find(".img-icon");
-   $(icon).removeClass("img-opacity-none");
-   $(icon).removeClass("b-white");
-   $(icon).addClass("img-opacity"); 
-},e=>{
-    $(e.target).removeClass("b-white");
-    let icon=$(e.target).find(".img-icon");
-   $(icon).removeClass("img-opacity");
-   $(icon).removeClass("b-white");
-   $(icon).addClass("img-opacity-none");
-});
+
 
 
 </script>
